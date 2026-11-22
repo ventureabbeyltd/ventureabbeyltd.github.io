@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VENTURE ABBEY LTD — MossyBeacon Games</title>
+<meta name="description" content="MossyBeacon Games">
+<meta name="color-scheme" content="light">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="VENTURE ABBEY LTD">
+<meta property="og:title" content="VENTURE ABBEY LTD — MossyBeacon Games">
+<meta property="og:description" content="MossyBeacon Games">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/fonts/fraunces.css">
+<link rel="stylesheet" href="/fonts/manrope.css">
+<style>
+:root {
+  --bg: hsl(112 30% 96%);
+  --paper: #fffdf8;
+  --ink: hsl(112 25% 10%);
+  --muted: hsl(112 10% 34%);
+  --line: hsl(112 20% 82%);
+  --accent: hsl(292 62% 40%);
+  --serif: Fraunces, "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --sans: Manrope, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; }
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; transition: none !important; } }
+
+body { background: var(--bg); color: var(--ink); font: 400 16px/1.65 var(--sans); }
+.in { max-width: 70rem; margin: 0 auto; padding: 0 clamp(1.1rem, 4vw, 2.2rem); }
+.mast { text-align: center; padding-top: clamp(1.6rem, 5vw, 2.8rem); }
+.mast .rules { border-top: 3px double var(--ink); border-bottom: 1px solid var(--ink); padding: clamp(.8rem, 3vw, 1.4rem) 0; }
+.mast h1 { margin: 0; font: 700 clamp(2.3rem, 8vw, 5rem)/1 var(--serif); letter-spacing: -.02em; }
+.dateline { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); padding: .55rem 0; border-bottom: 1px solid var(--line); }
+.dateline a { text-decoration: none; }
+.dateline a:hover { color: var(--accent); }
+.kicker { font-size: .74rem; letter-spacing: .16em; text-transform: uppercase; color: var(--accent); font-weight: 800; margin: 0 0 .5rem; }
+.feature { display: grid; gap: 1.6rem; padding: clamp(2rem, 5vw, 3.2rem) 0; border-bottom: 1px solid var(--line); }
+.collage { display: grid; grid-template-columns: 1.25fr 1fr; gap: .6rem; align-items: end; }
+.collage img { border-radius: 4px; box-shadow: 0 12px 30px rgba(50, 35, 15, .14); background: var(--paper); }
+.collage img:nth-child(2) { transform: translateY(-1.2rem); }
+.feature h2 { margin: 0 0 .8rem; font: 700 clamp(1.9rem, 4.6vw, 3rem)/1.05 var(--serif); letter-spacing: -.02em; }
+.feature .head { display: flex; align-items: center; gap: .9rem; margin-bottom: .8rem; }
+.feature .icon { width: 60px; height: 60px; border-radius: 14px; background: var(--paper); }
+.dropcap::first-letter { float: left; font: 700 3.4rem/.85 var(--serif); padding: .3rem .5rem 0 0; color: var(--accent); }
+.feature p { margin: 0 0 1rem; max-width: 52ch; }
+.cards { display: grid; gap: 1.6rem; padding: clamp(2rem, 5vw, 3rem) 0; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); }
+.card { display: flex; flex-direction: column; gap: .6rem; border-top: 3px solid var(--ink); padding-top: .9rem; }
+.card .cover { aspect-ratio: 4 / 3; overflow: hidden; border-radius: 3px; background: var(--paper); }
+.card .cover img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.card h3 { margin: 0; font: 700 1.35rem/1.15 var(--serif); display: flex; align-items: center; gap: .6rem; }
+.card h3 .icon { width: 34px; height: 34px; border-radius: 8px; }
+.card p { margin: 0; color: var(--muted); font-size: .95rem; }
+.actions { display: flex; gap: .5rem; flex-wrap: wrap; margin: .3rem 0 0; }
+.btn { display: inline-flex; align-items: center; gap: .45rem; padding: .55rem .95rem; border-radius: 2px; font-size: .84rem; font-weight: 700; line-height: 1; text-decoration: none; border: 1px solid var(--ink); transition: background-color .12s, color .12s; }
+.btn svg { width: 13px; height: 13px; }
+.btn-play { background: var(--ink); color: var(--bg); }
+.btn-play:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
+.btn-ghost:hover { color: var(--accent); border-color: var(--accent); }
+.btn:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.quote { border-top: 1px solid var(--line); padding: clamp(2.2rem, 6vw, 3.6rem) 0; display: grid; gap: 1.8rem; }
+.quote blockquote { margin: 0; font: italic 500 clamp(1.35rem, 3.2vw, 2rem)/1.3 var(--serif); max-width: 30ch; }
+.quote blockquote::before { content: "\201C"; color: var(--accent); }
+.quote blockquote::after { content: "\201D"; color: var(--accent); }
+.quote p { margin: 0 0 .8rem; color: var(--muted); max-width: 48ch; }
+.reach { display: flex; flex-direction: column; gap: .5rem; }
+.reach a { display: inline-flex; align-items: center; gap: .5rem; text-decoration: none; font-weight: 600; word-break: break-all; }
+.reach a:hover { color: var(--accent); }
+.reach svg { width: 15px; height: 15px; flex: 0 0 15px; color: var(--accent); }
+footer { border-top: 3px double var(--ink); }
+footer .in { padding-top: 1rem; padding-bottom: 2.2rem; text-align: center; font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.none { color: var(--muted); padding: 2rem 0; text-align: center; }
+@media (min-width: 860px) {
+  .feature { grid-template-columns: 1fr 1.1fr; column-gap: 3rem; align-items: center; }
+  .quote { grid-template-columns: 1.2fr 1fr; column-gap: 3rem; }
+}
+
+</style>
+</head>
+<body>
+<header class="mast in">
+  <div class="rules"><h1>VENTURE ABBEY LTD</h1></div>
+  <div class="dateline"><span>MossyBeacon Games</span>
+    <span><a href="#games">Games</a> &middot; <a href="#about">About</a> &middot; 2026</span></div>
+</header>
+<main id="games">
+  <article class="feature in">
+    <div class="collage"><img src="/shots/good-habit-streaks_1.png" alt="Good Habit Streaks screenshot 1" loading="lazy" decoding="async"><img src="/shots/good-habit-streaks_2.png" alt="Good Habit Streaks screenshot 2" loading="lazy" decoding="async"></div>
+    <div>
+      <p class="kicker">Featured</p>
+      <div class="head"><img class="icon" src="/icons/good-habit-streaks.png" alt="" width="60" height="60" loading="lazy"><h2 style="margin:0">Good Habit Streaks</h2></div>
+      <p class="dropcap">Build small daily habits and tick each one off with a simple streak tracker.</p>
+      <p class="actions"><a class="btn btn-play" href="https://play.google.com/store/apps/details?id=me.goodhabit.routine"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.14v13.72a1 1 0 0 0 1.5.86l11.14-6.86a1 1 0 0 0 0-1.72L9.5 4.28A1 1 0 0 0 8 5.14Z"/></svg>Google Play</a><a class="btn btn-ghost" href="/good-habit-streaks/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.3-2.9 8.3-7 9.5-4.1-1.2-7-5.2-7-9.5V6l7-3Z"/><path d="M9.5 12.2l1.9 1.9 3.5-3.7"/></svg>Privacy policy</a></p>
+    </div>
+  </article>
+  <section class="cards in" aria-label="More games">
+    <article class="card">
+      <div class="cover"><img src="/shots/month-long-calendar_1.png" alt="Month Long Calendar screenshot 1" loading="lazy" decoding="async"></div>
+      <h3><img class="icon" src="/icons/month-long-calendar.png" alt="" width="34" height="34" loading="lazy">Month Long Calendar</h3>
+      <p>Get back into a routine, one day at a time, with planks, squats or reading.</p>
+      <p class="actions"><a class="btn btn-play" href="https://play.google.com/store/apps/details?id=io.monthlong.daily"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.14v13.72a1 1 0 0 0 1.5.86l11.14-6.86a1 1 0 0 0 0-1.72L9.5 4.28A1 1 0 0 0 8 5.14Z"/></svg>Google Play</a><a class="btn btn-ghost" href="/month-long-calendar/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.3-2.9 8.3-7 9.5-4.1-1.2-7-5.2-7-9.5V6l7-3Z"/><path d="M9.5 12.2l1.9 1.9 3.5-3.7"/></svg>Privacy policy</a></p>
+    </article>
+  </section>
+  <section id="about" class="quote in">
+    <div><blockquote>MossyBeacon Games</blockquote></div>
+    <div>
+      <p class="kicker">About</p>
+      <p>We create small interactive landscapes filled with trails and discoveries. Our games encourage curiosity through gentle tasks and rewarding exploration.</p>
+      <p>We would rather ship a few games we are happy with than many we are not. Write to us any time.</p>
+      <p class="kicker" style="margin-top:1.4rem">Contact</p>
+      <div class="reach">
+        <a href="mailto:ventureabbeyltd@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="m3 7 8.2 5.6a1.4 1.4 0 0 0 1.6 0L21 7"/></svg><span>ventureabbeyltd@gmail.com</span></a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><div class="in">&copy; 2026 VENTURE ABBEY LTD &middot; ventureabbeyltd.cfd</div></footer>
+</body>
+</html>
